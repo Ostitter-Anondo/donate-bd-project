@@ -8,7 +8,28 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="">
-  
+  <header class="h-52">
+    <section class="backdrop-blur-sm fixed w-full z-10">
+      <nav class="backdrop-blur-sm bg-teal-50">
+        <div class="navbar px-8 pb-8 pt-4">
+          <div class="navbar-start">
+            <button class="btn bg-[#b4f461]">Blog</button>
+          </div>
+          <div class="navbar-center">
+            <a class="btn btn-ghost text-xl">Donate Bangladesh</a>
+          </div>
+          <div class="navbar-end flex gap-2">
+            <img src="assets/coin.png" alt="">
+            <p class="font-medium text-lg">5500</p>
+          </div>
+        </div>
+      </nav>
+      <div class="flex justify-center gap-6 pt-12 pb-6">
+        <button id="dono-btn" class="btn bg-[#b4f461]">Donation</button>
+        <button id="pay-hst" class="btn btn-outline">History</button>
+      </div>
+    </section>
+  </header>
   <script src="js/history.js"></script>
   <script src="js/home.js"></script>
 </body>
