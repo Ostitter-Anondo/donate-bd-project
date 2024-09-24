@@ -9,18 +9,18 @@
 </head>
 <body class="">
   <header class="h-52">
-    <section class="backdrop-blur-sm fixed w-full z-10">
-      <nav class="backdrop-blur-sm bg-teal-50">
+    <section class="backdrop-blur-lg fixed w-full z-10">
+      <nav class="backdrop-blur-lg bg-teal-200/30">
         <div class="navbar px-8 pb-8 pt-4">
           <div class="navbar-start">
-            <button class="btn bg-[#b4f461]">Blog</button>
+            <button class="btn bg-[#b4f461]" id="toBlog">Blog</button>
           </div>
           <div class="navbar-center">
-            <a href="#" class="btn btn-ghost text-xl">Donate Bangladesh</a>
+            <a href="#" class="btn btn-ghost text-xl"><img src="assets/logo.png" alt="" class="w-8">Donate Bangladesh</a>
           </div>
           <div class="navbar-end flex gap-2">
             <img src="assets/coin.png" alt="">
-            <p class="font-medium text-lg">5500</p>
+            <p id="balance" class="font-medium text-lg">5500</p>
           </div>
         </div>
       </nav>
@@ -43,7 +43,7 @@
             <div class="stats w-fit bg-gray-100">
               <div class="stat flex flex-row items-center gap-2">
                 <img src="assets/coin.png" alt="" class="">
-                <div class="stat-title" id="noakhali-total"> 89,400 BDT</div>
+                <div class="stat-title"><span id="noakhali-total">89400</span> BDT</div>
               </div>
             </div>
             <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -64,7 +64,7 @@
             <div class="stats w-fit bg-gray-100">
               <div class="stat flex flex-row items-center gap-2">
                 <img src="assets/coin.png" alt="" class="">
-                <div class="stat-title" id="feni-total"> 89,400 BDT</div>
+                <div class="stat-title"><span id="feni-total">89400</span> BDT</div>
               </div>
             </div>
             <h2 class="card-title">Donate for Flood at Feni, Bangladesh</h2>
@@ -85,7 +85,7 @@
             <div class="stats w-fit bg-gray-100">
               <div class="stat flex flex-row items-center gap-2">
                 <img src="assets/coin.png" alt="" class="">
-                <div class="stat-title" id="quota-total"> 89,400 BDT</div>
+                <div class="stat-title"><span id="quota-total">89400</span> BDT</div>
               </div>
             </div>
             <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
@@ -99,7 +99,35 @@
       </div>
     </section>
     <section id="dono-hst-box" class="hidden">
-      <div class="bg-white flex flex-col items-center"></div>
+      <div id="trx-hst" class="flex flex-col items-center"></div>
+    </section>
+    <section>
+      <dialog id="success-modal" class="modal">
+        <div class="modal-box flex flex-col items-center gap-4">
+          <h1 class="text-3xl font-extrabold">Congrats!</h1>
+          <img src="assets/coin.png" alt="" class="w-12">
+          <p class="text-lg">You have donated to humankind</p>
+          <h3 class="text-xl font-bold">Successfully</h3>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">close confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <dialog id="failure-modal" class="modal">
+        <div class="modal-box flex flex-col items-center gap-4">
+          <h1 class="text-3xl font-extrabold">Sorry!</h1>
+          <img src="assets/coin.png" alt="" class="w-12">
+          <p class="text-lg text-red-600">Invalid input type or amount</p>
+          <h3 class="text-xl font-bold">Donation Failed</h3>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">close confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </section>
   </main>
   <footer></footer>
