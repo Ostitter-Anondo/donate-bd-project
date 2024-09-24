@@ -25,6 +25,7 @@ document.getElementById("btn-noakhali").addEventListener('click', function(event
   let total = Number(document.getElementById("noakhali-total").innerText);
   if (isNaN(toAdd) || toAdd <= 0 || toAdd > Number(balance)){
     document.getElementById("failure-modal").showModal();
+    return;
   }
   document.getElementById("balance").textContent = `${balance - toAdd}`;
   document.getElementById("noakhali-total").textContent = `${total + toAdd}`;
@@ -38,6 +39,7 @@ document.getElementById("btn-feni").addEventListener('click', function(event){
   let total = Number(document.getElementById("feni-total").innerText);
   if (isNaN(toAdd) || toAdd <= 0 || toAdd > Number(balance)){
     document.getElementById("failure-modal").showModal();
+    return;
   }
   document.getElementById("balance").textContent = `${balance - toAdd}`;
   document.getElementById("feni-total").textContent = `${total + toAdd}`;
@@ -51,6 +53,7 @@ document.getElementById("btn-quota").addEventListener('click', function(event){
   let total = Number(document.getElementById("quota-total").innerText);
   if (isNaN(toAdd) || toAdd <= 0 || toAdd > Number(balance)){
     document.getElementById("failure-modal").showModal();
+    return;
   }
   document.getElementById("balance").textContent = `${balance - toAdd}`;
   document.getElementById("quota-total").textContent = `${total + toAdd}`;

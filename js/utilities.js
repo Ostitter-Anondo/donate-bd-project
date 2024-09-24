@@ -22,8 +22,8 @@ function trxMaker(location, amount){
                     ${amount} Taka is Donated for ${location}
                   </h3>
                   <br>
-                  <p class="text-lg font-light">
-                    ${rightNow.toString()}
+                  <p class="text-lg font-light text-gray-500">
+                    Date : ${rightNow.toString()}
                   </p>
   `;
   document.getElementById('trx-hst').appendChild(div);
