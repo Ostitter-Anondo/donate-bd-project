@@ -25,13 +25,11 @@ document.getElementById("btn-noakhali").addEventListener('click', function(event
   let total = Number(document.getElementById("noakhali-total").innerText);
   if (isNaN(toAdd) || toAdd <= 0 || toAdd > Number(balance)){
     document.getElementById("failure-modal").showModal();
-    return false;
   }
   document.getElementById("balance").textContent = `${balance - toAdd}`;
   document.getElementById("noakhali-total").textContent = `${total + toAdd}`;
   trxMaker("Flood Relief at Noakhali, Bangladesh", toAdd);
   document.getElementById("success-modal").showModal();
-  return true;
 });
 document.getElementById("btn-feni").addEventListener('click', function(event){
   event.preventDefault();
@@ -40,13 +38,11 @@ document.getElementById("btn-feni").addEventListener('click', function(event){
   let total = Number(document.getElementById("feni-total").innerText);
   if (isNaN(toAdd) || toAdd <= 0 || toAdd > Number(balance)){
     document.getElementById("failure-modal").showModal();
-    return false;
   }
   document.getElementById("balance").textContent = `${balance - toAdd}`;
   document.getElementById("feni-total").textContent = `${total + toAdd}`;
   trxMaker("Flood Relief at Feni, Bangladesh", toAdd);
   document.getElementById("success-modal").showModal();
-  return true;
 });
 document.getElementById("btn-quota").addEventListener('click', function(event){
   event.preventDefault();
@@ -55,11 +51,9 @@ document.getElementById("btn-quota").addEventListener('click', function(event){
   let total = Number(document.getElementById("quota-total").innerText);
   if (isNaN(toAdd) || toAdd <= 0 || toAdd > Number(balance)){
     document.getElementById("failure-modal").showModal();
-    return false;
   }
   document.getElementById("balance").textContent = `${balance - toAdd}`;
   document.getElementById("quota-total").textContent = `${total + toAdd}`;
   trxMaker("Aid for Injured in the Quota Movement, Bangladesh", toAdd);
   document.getElementById("success-modal").showModal();
-  return true;
 });
