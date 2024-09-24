@@ -1,28 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <header class="h-52">
-    <section class="backdrop-blur-lg fixed w-full z-10">
-      <nav class="backdrop-blur-lg bg-teal-200/30">
-        <div class="navbar px-8 pb-8 pt-4">
-          <div class="navbar-start">
-            <button class="btn bg-[#b4f461]" id="toHome">Home</button>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="h-52">
+      <section class="backdrop-blur-lg fixed w-full z-10">
+        <nav class="backdrop-blur-lg bg-teal-200/30">
+          <div class="navbar px-8 pb-8 pt-4">
+            <div class="navbar-start">
+              <button class="btn bg-[#b4f461]" id="to-home">Home</button>
+            </div>
+            <div class="navbar-center">
+              <a href="#" class="btn btn-ghost lg:text-xl"
+                ><img src="assets/logo.png" alt="" class="w-8" />Donate
+                <br class="lg:hidden">Bangladesh</a
+              >
+            </div>
+            <div class="navbar-end flex gap-2">
+              <img src="assets/coin.png" alt="" />
+              <p id="balance" class="font-medium text-lg">5500</p>
+            </div>
           </div>
-          <div class="navbar-center">
-            <a href="#" class="btn btn-ghost text-xl"><img src="assets/logo.png" alt="" class="w-8">Donate Bangladesh</a>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <section class="border rounded-xl border-collapse w-10/12 mx-auto">
+        <div class="collapse collapse-arrow border rounded-none">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is Document Object Model (DOM)?
           </div>
-          <div class="navbar-end flex gap-2">
-            <img src="assets/coin.png" alt="">
-            <p id="balance" class="font-medium text-lg">5500</p>
+          <div class="collapse-content">
+            <p>
+              DOM is a method to divide an HTML document into nodes and objects
+              in order to manipulate them using a scripting language such as
+              JavaScript.
+            </p>
           </div>
         </div>
-      </nav>
-    </section>
-  </header>
-</body>
+        <div class="collapse collapse-arrow border rounded-none">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              An element can be selected from DOM by the ID or Class or even the
+              general Tag of the element.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border rounded-none">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Attaching an event listener to a parent node in order to handle
+              events triggered by any of its child elements is called event
+              delegation. It increases performance significantly and simplifies
+              code.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border rounded-none">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Using the element selection menthod to select the element we want
+              to modify, wew can use the setAttribute property to change
+              attributes and the style property to change styles.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.getElementById("to-home").addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
 </html>
